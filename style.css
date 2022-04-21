@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 /* --------------------------------- Common --------------------------------- */
+
+/* icon bar */
+
+i[class*="icon-bar"] {
+  display: none;
+}
+
 .clear {
   clear: both;
 }
@@ -271,4 +278,35 @@
 #footer .foo_txt {
   font-size: 46px;
   margin: 50px 0;
+}
+
+@media only screen and (max-width: 601px) {
+  body {
+    background-color: lightblue;
+  }
+  #nav {
+    /* display: none; */
+  }
+  i[class*="search_m"] {
+    display: none;
+  }
+  i[class*="icon-bar"] {
+    display: inline-block;
+  }
+  #nav li:not(:first-child) {
+    display: none;
+  }
+
+  #nav.toggle li {
+    display: block;
+  }
+  .images {
+    width: 100% !important;
+  }
+  .iimg {
+    width: 60%;
+  }
+  .col-reponsive {
+    width: 100%;
+  }
 }
